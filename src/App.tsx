@@ -5,6 +5,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Documents from "./pages/Documents";
+import NDA from "./pages/NDA";
+import Status from "./pages/Status";
 import { DashboardLayout } from "./components/layout/DashboardLayout";
 
 const queryClient = new QueryClient();
@@ -43,6 +45,8 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/dashboard/documents" element={<Documents />} />
+          <Route path="/dashboard/nda" element={<NDA />} />
+          <Route path="/dashboard/status" element={<Status />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { toast } from "@/hooks/use-toast";
 import { 
   LayoutDashboard, 
   FileText, 
@@ -27,7 +28,10 @@ export const DashboardLayout = ({ children }: DashboardLayoutProps) => {
             variant="ghost"
             onClick={() => {
               navigate("/");
-              toast.success("Logged out successfully");
+              toast({
+                title: "Success",
+                description: "Logged out successfully"
+              });
             }}
           >
             <LogOut className="h-5 w-5 mr-2" />
